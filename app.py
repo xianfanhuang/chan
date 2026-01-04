@@ -241,6 +241,7 @@ class EnhancedChantismEngine:
         self.segments: List[Segment] = []
         self.pivots: List[Pivot] = []
         self.signals: List[Dict] = []
+        self.processed_k: List[Dict] = []
         
     def _prepare_data(self):
         """数据预处理"""
@@ -270,6 +271,7 @@ class EnhancedChantismEngine:
     def process_k_lines_optimized(self):
         """优化K线包含处理（向量化+缓存）"""
         if self.df.empty:
+            self.processed_k = []
             return []
         
         # 使用向量化操作提高性能
