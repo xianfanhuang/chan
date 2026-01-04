@@ -1,11 +1,6 @@
-import streamlit
-import yfinance
-import pandas
-import pandas_ta
-import plotly
-import requests
-
-print("✅ 所有核心依赖导入成功！")
-print(f"Streamlit版本: {streamlit.__version__}")
-print(f"yfinance版本: {yfinance.__version__}")
-print(f"Pandas版本: {pandas.__version__}")
+streamlit
+yfinance
+pandas
+pandas_ta
+plotly
+requests
